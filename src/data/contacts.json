@@ -1,0 +1,12 @@
+[
+  {
+    "desc": "Have a project or an idea you’d like to collaborate with me on? Let’s talk.",
+    "title": "Work with me",
+    "type": "work",
+    "methods": [{
+      "text": "schneider.brandonjames@gmail.com",
+      "type": "email",
+      "uri": "mailto:schneider.brandonjames@gmail.com"
+    }]
+  }
+]

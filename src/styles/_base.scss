@@ -1,0 +1,29 @@
+/*
+Application Settings Go Here
+------------------------------------
+This file acts as a bundler for all variables/mixins/themes, so they
+can easily be swapped out without `core.scss` ever having to know.
+
+For example:
+
+@import './variables/colors';
+@import './variables/components';
+@import './themes/default';
+*/
+
+@import './vendor/foundation/includes';
+@import './vendor/foundation/settings';
+@import './vendor/foundation/foundation.scss';
+
+@import './vendor/bulma/utilities/all';
+
+/* Helpers: re-usable code (nothing here is compiled directly) */
+@import "./lib/variables";
+@import "./lib/colours";
+@import "./lib/mixins";
+@import "./lib/wordpress-styles";
+
+/* Foundation: Normalise, resets, base styles & typography */
+//@import '../../node_modules/normalize-libsass/normalize';
+@import "./lib/environment";
+@import "./lib/typography";

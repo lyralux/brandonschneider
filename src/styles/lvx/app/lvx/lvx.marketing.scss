@@ -1,0 +1,82 @@
+html {
+  overflow-y: auto;
+}
+.app-content-body {
+  @include grid-block();
+  @include grid-orient(vertical);
+}
+
+.marketing-view {
+  @include grid-block(expand, vertical);
+  background-color: #ececec;
+
+  .mark1 {
+    @include grid-block(expand, vertical);
+    .m-gb{
+      @include grid-content();
+    }
+    .mark1-1 {
+    @include grid-block(shrink, vertical);
+    padding: 15px;
+    .inner {
+          @include grid-block();
+          background-color: #FFF;
+          .wrap {
+            @include grid-content();
+          }
+        }
+    }
+
+  }
+  .mark2 {
+    @include grid-block(shrink);
+    padding: 15px;
+    .mark2-1, .mark2-2 {
+
+      //> div {
+      //  background: $grey-200;
+      //  @include grid-content();
+      //}
+    }
+    .mark2-1 {
+      @include grid-block(shrink, vertical);
+      margin-right: 15px;
+    }
+    .mark2-2 {
+      @include grid-block(expand, vertical);
+    }
+    .inner2 {
+      @include grid-content();
+    }
+    .inner {
+      @include grid-block();
+      background-color: #FFF;
+    }
+  }
+}
+
+.performance-section {
+  padding: 0 0.75em;
+}
+.performance-component {
+  //@include grid-block();
+
+  .column:first-child {
+    padding-right: 0.5em;
+  }
+  .column:last-child {
+    padding-left: 0.5em;
+  }
+
+  &:last-child {
+    margin-right: 0px;
+  }
+  .wrap {
+    @include grid-content();
+  }
+  .inner {
+    padding: 15px;
+    text-align: center;
+    background-color: #FFF;
+  }
+}

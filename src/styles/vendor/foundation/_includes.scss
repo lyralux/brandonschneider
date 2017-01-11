@@ -1,0 +1,33 @@
+/// @Foundation.settings
+// CSS Exports
+// Change any value in this map from "false" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
+
+$include-css: (
+  accordion: false,
+  action-sheet: false,
+  block-list: false,
+  button: false,
+  button-group: false,
+  card: false,
+  coloring: false,
+  extras: false,
+  forms: false,
+  grid: false,
+  iconic: false,
+  label: false,
+  badge: false,
+  list: false,
+  menu-bar: false,
+  modal: false,
+  motion: false,
+  notification: false,
+  off-canvas: false,
+  panel: false,
+  popup: false,
+  switch: false,
+  tabs: false,
+  title-bar: false,
+  typography: false,
+  utilities: false,
+);
+///

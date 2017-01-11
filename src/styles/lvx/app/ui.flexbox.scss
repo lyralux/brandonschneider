@@ -1,0 +1,160 @@
+[layout],
+[data-layout] {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+[layout=column],
+[data-layout=column] {
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+    -webkit-box-orient: vertical;
+}
+
+[layout=row],
+[data-layout=row] {
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+
+[layout-wrap],
+[data-layout-wrap] {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+[layout-fill],
+[data-layout-fill] {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+}
+
+@-moz-document url-prefix() {
+  [layout-fill],
+  [data-layout-fill] {
+    margin: 0;
+    width: 100%;
+    min-height: auto;
+    height: inherit; }
+}
+
+[flex],
+[data-flex] {
+  box-sizing: border-box;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+[flex-no-shrink],
+[data-flex-no-shrink]{
+  flex-shrink: 0;
+}
+
+
+.main-content {
+    display: block;
+    position: relative;
+    overflow: auto;
+}
+
+[layout=column],
+[data-layout=column] {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.hbox {
+  > * {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    flex: 1;
+  }
+  > aside {
+    flex: 0 0 auto;
+  }
+}
+
+[layout=column],
+[data-layout=column], .vbox {
+  .header, header, .column-header {
+    flex-shrink: 0;
+    height: 48px;
+  }
+  .column-body {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    overflow: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  footer, .footer, .foot, .col-foot{
+    flex-shrink: 0;
+  }
+}
+
+span[type="button"] {
+  -webkit-appearance: initial;
+}
+
+.app-content {
+  aside {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    flex: 0 0 auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #e3e3e3;
+  }
+  .app-content-body {
+    //position: relative;
+    //height: 100%;
+    //overflow: auto;
+    //-ms-overflow-style: -ms-autohiding-scrollbar;
+    //flex: 1;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.1);
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.3);
+}
