@@ -5,13 +5,15 @@
 
 import React from 'react';
 import classnames from 'classnames';
-import './index.scss';
+
 
 import EntranceTransition from 'components/entrance-transition';
 import WordAnimation from 'components/word-animation';
-// import DownChevron from 'app/components/down-chevron';
+import DownChevron from 'components/down-chevron';
 // import Rimage from 'app/components/rimage';
 // import Track from 'app/adaptors/server/track';
+
+import './index.scss';
 
 class Hero extends React.Component {
     constructor(props) {
@@ -19,6 +21,7 @@ class Hero extends React.Component {
         this.state = {
             chevronLoaded: false
         }
+        this.onClickDownChevron = this.onClickDownChevron.bind(this);
     }
     componentDidMount() {
         if (this.props.showDownChevron) {
@@ -70,17 +73,12 @@ class Hero extends React.Component {
         return chevron;
     }
     onClickDownChevron() {
-        Track('send', {
-            'hitType': 'event',
-            'eventCategory': 'hub_page',
-            'eventAction': 'click_animated_chevron',
-            'eventLabel': this.props.eventLabel
-        });
+      //TODO
     }
     render() {
         const { className, title, children } = this.props;
         return (
-            <section className={classnames('hero', className)}>
+            <section ref={(section) => this.node = section} className={classnames('hero', className)}>
             <EntranceTransition className="title-entrance">
                 <h1 className="title">
                     <WordAnimation delay={1} duration={0.5}>{title}</WordAnimation>
@@ -89,7 +87,7 @@ class Hero extends React.Component {
             </EntranceTransition>
             {/*{this.renderImage()}*/}
             {children}
-            {/*{this.renderDownChevron()}*/}
+            {this.renderDownChevron()}
         </section>
         )
     }

@@ -40,7 +40,7 @@ export const HomeView = (props) => {
         transitionImage={true}
         subheading="Check back soon"
         eventLabel='home'
-        showDownChevron={false}
+        showDownChevron={true}
       />
         <SingleColumn
             key="home-column"
