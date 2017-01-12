@@ -1,6 +1,6 @@
 $title:             $grey-darker !default
 $title-size:        $size-3 !default
-$title-weight:      $weight-light !default
+$title-weight:      $weight-normal !default
 $title-weight-bold: $weight-semibold !default
 
 $subtitle:          $grey-dark !default
@@ -10,7 +10,9 @@ $subtitle-weight:   $weight-light !default
 
 .title,
 .subtitle
-  +block
+  &.block
+    +block
+  //+block
   word-break: break-word
   em,
   span
@@ -21,10 +23,10 @@ $subtitle-weight:   $weight-light !default
     vertical-align: middle
 
 .title
-  color: $title
-  font-size: $title-size
+  //color: $title
+  //font-size: $title-size
   font-weight: $title-weight
-  line-height: 1.125
+  //line-height: 1.125
   strong
     color: inherit
   & + .highlight

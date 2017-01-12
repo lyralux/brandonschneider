@@ -1,0 +1,40 @@
+{
+  "stack": [
+    {
+      "title": "React",
+      "type": "User Interface",
+      "img": "/img/react.svg"
+    },
+    {
+      "title": "Redux",
+      "type": "State Management",
+      "img": "/img/redux.png"
+    },
+    {
+      "title": "ES6/ES7",
+      "type": "Front End",
+      "img": "/img/es7.png"
+    },
+    {
+      "title": "Node.js",
+      "type": "Back End",
+      "img": "/img/nodejs.png"
+    },
+    {
+      "title": "Webpack",
+      "type": "Dev Tools",
+      "img": "/img/webpack.png"
+    },
+    {
+      "title": "ESLint",
+      "type": "Dev Tools",
+      "img": "/img/eslint.svg"
+    }
+  ],
+  "todo": [
+    {
+      "title": "Test",
+      "type": "test"
+    }
+  ]
+}
