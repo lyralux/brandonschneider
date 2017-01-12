@@ -120,3 +120,20 @@ body {
     }
   }
 }
+
+.rimage {
+  &:not(.background-image) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &.background-image {
+    background-position: center;
+    background-size: cover;
+
+    .img {
+      display: none;
+    }
+  }
+}
