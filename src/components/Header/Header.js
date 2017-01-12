@@ -30,14 +30,9 @@ class Header extends Component {
                     </div>
                     <div className="nav-center">
                         <div className="nav-center">
-                            <a className="nav-item">
+                            <a className="nav-item" href="https://github.com/lyralux/brandonschneider" target="_blank">
                               <span className="icon">
                                 <i className="fa fa-github"></i>
-                              </span>
-                            </a>
-                            <a className="nav-item">
-                              <span className="icon">
-                                <i className="fa fa-twitter"></i>
                               </span>
                             </a>
                         </div>

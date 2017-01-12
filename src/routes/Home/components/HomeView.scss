@@ -15,6 +15,17 @@
   width: 140px;
   height: 140px;
 }
+
+.button.view_source {
+  width: auto;
+  padding: 0 20px;
+  background: $lightGrey;
+  height: 50px;
+  border: 0;
+  color: $nonBlack;
+  font-size: 18px;
+  border-radius: 0;
+}
 /*
  *  PAGE: JOIN US
  *  Showcasing ustwo perks and current vaccancies
