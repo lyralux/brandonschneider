@@ -1,11 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import DuckImage from '../assets/Duck.jpg'
 import classnames from 'classnames'
 import './HomeView.scss'
 import { showModal } from 'store/navigation'
 import Hero from 'components/hero'
 import SingleColumn from 'components/single-column'
+import ExperienceList from 'components/experience-list'
+
+import experienceData from 'data/experience'
 
 export const HomeView = (props) => {
   const classes = classnames('page-join-us', props.className);
@@ -20,12 +22,17 @@ export const HomeView = (props) => {
 
                   </nav>
                   <div className="jobs-container">
-
+                    <ExperienceList
+                      key={`jobs-experience`}
+                      title="Experience"
+                      jobs={experienceData}
+                      selected={true}
+                    />
                   </div>
               </section>
           </div>
       )
-  }
+  };
   return (
     <article className={classes}>
       <Hero
@@ -34,7 +41,7 @@ export const HomeView = (props) => {
         subheading="Check back soon"
         eventLabel='home'
         showDownChevron={false}
-      ></Hero>
+      />
         <SingleColumn
             key="home-column"
             title="About Me"
@@ -49,13 +56,13 @@ export const HomeView = (props) => {
         <ExperienceSection/>
     </article>
   )
-}
+};
 
 const mapDispatchToProps = {
   showModal : (modalType) => showModal(modalType),
-}
+};
 const mapStateToProps = (state) => ({
   ...state
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
