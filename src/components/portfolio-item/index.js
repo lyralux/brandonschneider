@@ -30,7 +30,7 @@ const PortfolioItem = React.createClass({
       featured: featured
     })}>
       <a href={link} onClick="" className="card-image">
-        <div className="rimage background-image" style={{backgroundImage: `url("${get(data, 'img')}"`}}>
+        <div className="rimage background-image" style={{backgroundImage: `url('${get(data, 'img')}')`}}>
           <img className="img" src={get(data, 'img')} />
         </div>
         <ImageHover autoAnim={500} hover={this.state.hover} />
