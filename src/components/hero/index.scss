@@ -121,19 +121,19 @@
 }
 
 /*
- *  BLOG CONTROLS
- *  Blog search button and filter
+ *  HERO BUTTON
+ *
  *
  *  Notes: This is the containing component for search and the dropdown buttons.
- *         The dropdown list itself is a modal called blog-categories.
+ *
  *  TODO: Bring variables in scope of component
  */
 
 .hero-button {
-  margin-top: 30px;
+  margin-top: 40px;
 
-  .submit,
-  .submit:after {
+  .button,
+  .button:after {
     height: $input-height;
   }
 
@@ -182,12 +182,6 @@
   @media screen and (min-width: $bp-medium) {
     margin-top: 80px;
 
-    .blog-filter {
-
-      .selected {
-        width: $blog-controls-item-width;
-      }
-    }
   }
 
 }
