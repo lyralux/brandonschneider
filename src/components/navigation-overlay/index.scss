@@ -52,7 +52,11 @@
   list-style: none;
 
   a {
-    @extend .h3;
+    font-size: 30px;
+    width: 100%;
+    font-family: $Futura;
+    text-transform: uppercase;
+    line-height: 1.1;
   }
   &.selected a {
     border-bottom: 4px solid $nonBlack;

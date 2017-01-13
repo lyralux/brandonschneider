@@ -91,7 +91,6 @@ const ExperienceItem = React.createClass({
   renderHighlights() {
     const { job } = this.props;
     const hightLights = get(job, 'highlights');
-    console.log(hightLights)
     let list;
     if(hightLights.length) {
       list = (

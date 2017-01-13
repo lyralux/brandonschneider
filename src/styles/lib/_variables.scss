@@ -1,3 +1,13 @@
+$PxGroteskLight: "PxGrotesk-Light", "Arial", sans-serif;
+$PxGroteskLightItalic: "PxGrotesk-LightItalic", "Arial", sans-serif;
+$PxGroteskRegular: "PxGrotesk-Regular", "Arial", sans-serif;
+$PxGroteskRegularItalic: "PxGrotesk-RegularItalic", "Arial", sans-serif;
+$PxGroteskBold: "PxGrotesk-Bold", "Arial", sans-serif;
+$PxGroteskBoldItalic: "PxGrotesk-BoldItalic", "Arial", sans-serif;
+$Futura: 'Open Sans', sans-serif;//, Futura, Arial, sans-serif;
+$lato: 'Lato', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+
+
 /* ------------------------------------------------------------ *\
 |* Breakpoints
 \* ------------------------------------------------------------ */
@@ -82,3 +92,6 @@ $hover-duration-quick: .2s;
 $hover-duration: .32s;
 $hover-fade-back: .8;
 $hover-scale-up: 1.05;
+
+
+$input-height: 50px;

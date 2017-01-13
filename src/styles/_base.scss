@@ -11,9 +11,9 @@ For example:
 @import './themes/default';
 */
 
-@import './vendor/foundation/includes';
-@import './vendor/foundation/settings';
-@import './vendor/foundation/foundation.scss';
+//@import './vendor/foundation/includes';
+//@import './vendor/foundation/settings';
+//@import './vendor/foundation/foundation.scss';
 
 @import './vendor/bulma/utilities/all';
 
@@ -23,7 +23,4 @@ For example:
 @import "./lib/mixins";
 @import "./lib/wordpress-styles";
 
-/* Foundation: Normalise, resets, base styles & typography */
-//@import '../../node_modules/normalize-libsass/normalize';
-@import "./lib/environment";
-@import "./lib/typography";
+

@@ -8,7 +8,6 @@ import './index.scss';
 
 export const TechStack = (props) => {
   const { stack } = props;
-  console.log(stack);
   return (
     <section className="tech-stack">
       <div className="stack-container">

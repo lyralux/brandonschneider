@@ -23,7 +23,7 @@
     padding: 0 20px;
     text-align: center;
     color: $offWhite;
-    font-weight: bold;
+    font-weight: 900;
   }
 
   .rimage {
@@ -119,3 +119,76 @@
     transition-delay: 1.3s;
   }
 }
+
+/*
+ *  BLOG CONTROLS
+ *  Blog search button and filter
+ *
+ *  Notes: This is the containing component for search and the dropdown buttons.
+ *         The dropdown list itself is a modal called blog-categories.
+ *  TODO: Bring variables in scope of component
+ */
+
+.hero-button {
+  margin-top: 30px;
+
+  .submit,
+  .submit:after {
+    height: $input-height;
+  }
+
+  .button {
+    width: auto;
+    padding: 0 20px;
+    background: $offWhite;
+
+    border: 0;
+    font-size: 18px;
+    border-radius: 0;
+    font-weight: bold;
+
+    .submit-text {
+      display: inline;
+      line-height:$input-height;
+      color: $nonBlack;
+    }
+
+    &:after {
+
+    }
+
+    &:active {
+      /* TODO: Use a 'darken' function here but the sass one doesn't seem to be working. Bad-sass! */
+      background: $lightGrey;
+    }
+
+    &:after {
+      @include arrow-icon($nonBlack);
+      width: 13px;
+      height: 10px;
+      margin-left: 10px;
+      content: "";
+      position: relative;
+      display: inline-block;
+      background-size: 13px 10px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(-90deg) scale(0.8);
+    }
+  }
+
+
+
+  @media screen and (min-width: $bp-medium) {
+    margin-top: 80px;
+
+    .blog-filter {
+
+      .selected {
+        width: $blog-controls-item-width;
+      }
+    }
+  }
+
+}
+

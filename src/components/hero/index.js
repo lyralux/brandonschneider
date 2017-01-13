@@ -31,7 +31,7 @@ class Hero extends React.Component {
                 this.setState({
                     chevronLoaded: true
                 });
-            }, 1500);
+            }, 2500);
         }
     }
     componentWillUnmount() {
@@ -81,7 +81,7 @@ class Hero extends React.Component {
             <section ref={(section) => this.node = section} className={classnames('hero', className)}>
             <EntranceTransition className="title-entrance">
                 <h1 className="title">
-                    <WordAnimation delay={1} duration={0.5}>{title}</WordAnimation>
+                    <WordAnimation delay={1} duration={1.5}>{title}</WordAnimation>
                 </h1>
                 {this.renderSubheading()}
             </EntranceTransition>

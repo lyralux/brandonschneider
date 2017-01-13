@@ -48,12 +48,15 @@ class HomeView extends React.Component {
     return (
       <article className={classes}>
         <Hero
-          title="Work in progress"
+          title="Hi, I'm Brandon. I create and design user interfaces."
           transitionImage={true}
-          subheading="Check back soon"
           eventLabel='home'
           showDownChevron={true}
-        />
+        >
+          <div className="hero-button">
+            <a className="button submit" onClick={() => this.props.showModal('contacts')}><span className="submit-text">Work with me</span></a>
+          </div>
+        </Hero>
         <SingleColumn
           key="home-column"
           headingColour=""

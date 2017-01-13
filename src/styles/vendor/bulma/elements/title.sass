@@ -15,8 +15,9 @@ $subtitle-weight:   $weight-light !default
   //+block
   word-break: break-word
   em,
-  span
-    font-weight: $title-weight
+  + span
+    &:not(.word)
+      font-weight: $title-weight
   strong
     font-weight: $title-weight-bold
   .tag
@@ -25,7 +26,7 @@ $subtitle-weight:   $weight-light !default
 .title
   //color: $title
   //font-size: $title-size
-  font-weight: $title-weight
+  //font-weight: $title-weight
   //line-height: 1.125
   strong
     color: inherit

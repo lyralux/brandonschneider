@@ -10,8 +10,6 @@ import reactSvg from './react.svg'
 export const TechStackItem = (props) => {
   const { item } = props;
 
-  console.log(props);
-
   return (
     <div className="column is-one-third">
       <div className="card">
