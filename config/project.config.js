@@ -28,6 +28,11 @@ const config = {
   server_port : process.env.PORT || 3000,
 
   // ----------------------------------
+  // API Configuration
+  // ----------------------------------
+  api_url: '/api/v1',
+
+  // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
   compiler_babel : {

@@ -25,12 +25,13 @@ const PortfolioItem = React.createClass({
     const link = "";
     const category = "product";
 
+
     return <div className={classnames('card-item', 'work-item', `work-item-${id}`, `work-label-${kebabCase(category)}`, {
       featured: featured
     })}>
       <a href={link} onClick="" className="card-image">
-        <div className="rimage background-image" style={{backGroundImage: `url(${get(data, 'img')}`}}>
-          <img src={get(data, 'img')} />
+        <div className="rimage background-image" style={{backgroundImage: `url("${get(data, 'img')}"`}}>
+          <img className="img" src={get(data, 'img')} />
         </div>
         <ImageHover autoAnim={500} hover={this.state.hover} />
       </a>

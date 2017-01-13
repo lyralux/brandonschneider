@@ -5,11 +5,14 @@ const webpack = require('webpack')
 const webpackConfig = require('../config/webpack.config')
 const project = require('../config/project.config')
 const compress = require('compression')
+const api = require('./api/api')
 
 const app = express()
 
 // Apply gzip compression
 app.use(compress())
+
+app.use('/api/v1', api)
 
 // ------------------------------------
 // Apply Webpack HMR Middleware
