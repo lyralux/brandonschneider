@@ -5,8 +5,8 @@ import createLogger from 'redux-logger'
 import makeRootReducer from './reducers'
 import { updateLocation } from './location'
 
-function logger(){
-  return createLogger({});
+function logger () {
+  return createLogger({})
 }
 
 export default (initialState = {}) => {

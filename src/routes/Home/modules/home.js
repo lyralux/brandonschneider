@@ -8,19 +8,17 @@ import Rest from 'utils/rest'
 // ------------------------------------
 export const GET_EXPERIENCE = 'GET_EXPERIENCE'
 
-const rest = Rest();
+const rest = Rest()
 
-export function Resources(rest){
+export function Resources (rest) {
   return {
-    get(data) {
-      return rest.get(`experience/`, data);
+    get (data) {
+      return rest.get(`experience/`, data)
     }
   }
 }
 
-
-let experienceApi = Resources(rest);
-
+let experienceApi = Resources(rest)
 
 // ------------------------------------
 // Actions
@@ -54,9 +52,8 @@ export const getExperience = () => {
 }
 
 export const actions = {
-  getExperience,
+  getExperience
 }
-
 
 // ------------------------------------
 // Action Handlers

@@ -1,12 +1,10 @@
 import { injectReducer } from '../../store/reducers'
 import HomeView from './components/HomeView'
 
-
 // // Sync route definition
 // export default {
 //   component : HomeView
 // }
-
 
 export default (store) => ({
   /*  Async getComponent is only invoked when route matches   */

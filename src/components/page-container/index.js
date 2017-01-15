@@ -3,17 +3,16 @@
  */
 import React from 'react'
 
-
 export const PageContainer = (props) => {
-    const { children, transitionState } = props;
-    const classNames = 'page-container ' + props.extraClasses;
-    return (
+  const { children, transitionState } = props
+  const classNames = 'page-container ' + props.extraClasses
+  return (
     <div className={classNames}>
-        {React.Children.map(children, (child) => {
-            return React.cloneElement(child, { transitionState: transitionState });
-        })}
+      {React.Children.map(children, (child) => {
+        return React.cloneElement(child, { transitionState: transitionState })
+      })}
     </div>
-    );
+  )
 }
 
 export default PageContainer

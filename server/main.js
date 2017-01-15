@@ -68,7 +68,7 @@ if (project.env === 'development') {
   // server in production.
   app.use(express.static(project.paths.dist()))
 
-  app.get('*', function (request, response){
+  app.get('*', function (request, response) {
     response.sendFile(path.join(project.paths.dist(), 'index.html'))
   })
 }

@@ -2,7 +2,7 @@
  * Created by lvx on 1/10/17.
  */
 import React, { Component, PropTypes } from 'react'
-import './index.scss';
+import './index.scss'
 
 class Footer extends Component {
   static propTypes = {
@@ -11,18 +11,17 @@ class Footer extends Component {
   }
 
   render () {
-
     return (
-      <footer className="app-footer">
-        <div className="footer__logo">
-          <img src="/logo_white.png" />
+      <footer className='app-footer'>
+        <div className='footer__logo'>
+          <img src='/logo_white.png' />
         </div>
-        <div className="content">
-          <div className="copyright">
+        <div className='content'>
+          <div className='copyright'>
             <ul>
-              <li></li>
+              <li />
               <li>Copyright © brandon j schneider 2017. All rights reserved.</li>
-              <li></li>
+              <li />
             </ul>
           </div>
         </div>

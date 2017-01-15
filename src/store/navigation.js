@@ -23,7 +23,6 @@ export function closeModal () {
   }
 }
 
-
 // ------------------------------------
 // Specialized Action Creator
 // ------------------------------------
