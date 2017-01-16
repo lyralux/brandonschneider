@@ -42,6 +42,16 @@ export default (initialState = {}) => {
   )
   store.asyncReducers = {}
 
+  browserHistory.listen(location => {
+    setTimeout(() => {
+      if (location.action === 'POP') {
+        return
+      }
+      // window.scrollTop = 0;
+      window.scrollTo(0, 0)
+    })
+  })
+
   // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
   store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 

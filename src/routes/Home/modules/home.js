@@ -7,6 +7,7 @@ import Rest from 'utils/rest'
 // Constants
 // ------------------------------------
 export const GET_EXPERIENCE = 'GET_EXPERIENCE'
+export const SET_SELECTED_SKILL = 'SET_SELECTED_SKILL'
 
 const rest = Rest()
 
@@ -31,6 +32,13 @@ export function getExperience2 (value = 1) {
   }
 }
 
+export function setSelectedSkill (skill) {
+  return {
+    type    : SET_SELECTED_SKILL,
+    payload : skill
+  }
+}
+
 export const getExperience = () => {
   return (dispatch, getState) => {
     return experienceApi.get().then(result => {
@@ -52,7 +60,8 @@ export const getExperience = () => {
 }
 
 export const actions = {
-  getExperience
+  getExperience,
+  setSelectedSkill
 }
 
 // ------------------------------------
@@ -64,6 +73,12 @@ const ACTION_HANDLERS = {
       ...state,
       experience: action.payload
     }
+  },
+  [SET_SELECTED_SKILL]: (state, action) => {
+    return {
+      ...state,
+      selectedSkill: action.payload
+    }
   }
 }
 
@@ -71,7 +86,8 @@ const ACTION_HANDLERS = {
 // Reducer
 // ------------------------------------
 const initialState = {
-  experience: []
+  experience: [],
+  selectedSkill: 'front-end'
 }
 export default function homeReducer (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]

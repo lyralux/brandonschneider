@@ -1,8 +1,6 @@
 /**
  * Created by brand on 1/11/2017.
  */
-'use strict'
-
 import React from 'react'
 import classnames from 'classnames'
 

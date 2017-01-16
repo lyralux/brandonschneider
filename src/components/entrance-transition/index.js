@@ -17,8 +17,13 @@ class EntranceTransition extends React.Component {
   }
   render () {
     const classes = classnames('entrance-transition', this.props.className)
-    return <div ref={(div) => this.node = div} className={classes}>{this.props.children}</div>
+    return <div ref={(div) => { this.node = div }} className={classes}>{this.props.children}</div>
   }
-};
+}
+
+EntranceTransition.propTypes = {
+  className: React.PropTypes.any,
+  children: React.PropTypes.any
+}
 
 export default EntranceTransition

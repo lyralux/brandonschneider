@@ -1,31 +1,38 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import classnames from 'classnames'
 import { get } from 'lodash'
-
-import { showModal } from 'store/navigation'
 import Hero from 'components/hero'
 import SingleColumn from 'components/single-column'
 import ExperienceList from 'components/experience-list'
 import TechStack from 'components/tech-stack'
+import SkillsSection from './SkillsSection'
+// import PageLoader from 'components/page-loader'
 
 import techStackData from 'data/techStack'
 import './HomeView.scss'
 
-import { getExperience } from '../modules/home'
-
 class HomeView extends React.Component {
   constructor (props) {
     super(props)
+    this.state = {
+      loaded: false
+    }
+
   }
   componentDidMount () {
     const { fetchExperience } = this.props
     fetchExperience()
   }
   render () {
-    const { experienceData } = this.props
+    const { experienceData, showModal } = this.props
+    const { loaded } = this.state
+
+    // if(!loaded) {
+    //   return <PageLoader pageId="join-us" />
+    // }
     const classes = classnames('page-join-us', this.props.className)
     console.log(get(techStackData, 'stack'))
+
     const ExperienceSection = () => {
       return (
         <div key='job-section'>
@@ -46,7 +53,7 @@ class HomeView extends React.Component {
       )
     }
     return (
-      <article className={classes}>
+      <article ref={(a) => { this.node = a }} className={classes}>
         <Hero
           title="Hi, I'm Brandon. I create and design user interfaces."
           transitionImage
@@ -54,7 +61,7 @@ class HomeView extends React.Component {
           showDownChevron
         >
           <div className='hero-button'>
-            <a className='button submit' onClick={() => this.props.showModal('contacts')}><span className='submit-text'>Work with me</span></a>
+            <a className='button submit' onClick={() => showModal('contacts')}><span className='submit-text'>Work with me</span></a>
           </div>
         </Hero>
         <SingleColumn
@@ -85,19 +92,11 @@ class HomeView extends React.Component {
           </p>
         </SingleColumn>
         <ExperienceSection />
+        <SkillsSection showSkillModal={this.props.showModal} className={'home-skills'} setSelectedSkill={this.props.setSelectedSkill} selectedSkill={this.props.selectedSkill} />
         <TechStack stack={get(techStackData, 'stack')} />
       </article>
     )
   };
 }
 
-const mapDispatchToProps = {
-  showModal : (modalType) => showModal(modalType),
-  fetchExperience: () => getExperience()
-}
-const mapStateToProps = (state) => ({
-  ...state,
-  experienceData: state.home.experience
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeView)
+export default HomeView

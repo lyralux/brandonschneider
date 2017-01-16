@@ -8,14 +8,6 @@ import classnames from 'classnames'
 import './index.scss'
 
 class CloseButton extends Component {
-  static propTypes = {
-    onClose: PropTypes.func.isRequired,
-    autoAnim: PropTypes.bool,
-    loop: PropTypes.bool,
-    className: PropTypes.string,
-    style: PropTypes.object,
-    children: PropTypes.node
-  }
   constructor (props) {
     super(props)
     this.state = Object.assign({
@@ -27,6 +19,10 @@ class CloseButton extends Component {
     }, props)
 
     this.anim = this.anim.bind(this)
+    this.resetAnim = this.resetAnim.bind(this)
+    this.goToProgressRatio = this.goToProgressRatio.bind(this)
+    this.goToFrame = this.goToFrame.bind(this)
+    this.hideAllFrames = this.hideAllFrames.bind(this)
   }
   componentDidMount () {
     const autoAnim = this.props.autoAnim
@@ -148,6 +144,15 @@ class CloseButton extends Component {
       </button>
     )
   }
-};
+}
+
+CloseButton.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  autoAnim: PropTypes.bool,
+  loop: PropTypes.bool,
+  className: PropTypes.string,
+  style: PropTypes.object,
+  children: PropTypes.node
+}
 
 export default CloseButton

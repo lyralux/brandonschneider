@@ -10,15 +10,21 @@ export const ContactDetail = ({ detail }) => (
     <h3 className='title'>{detail.title}</h3>
     <p className='description'>{detail.desc}</p>
     {detail.methods.map(link => {
-      return <a
-        key={`contact-detail-link-${link.uri}`}
-        className={classnames('link', link.type)}
-        href={link.uri}
-            >
-        {link.text}
-      </a>
+      return (
+        <a
+          key={`contact-detail-link-${link.uri}`}
+          className={classnames('link', link.type)}
+          href={link.uri}
+        >
+          {link.text}
+        </a>
+      )
     })}
   </div>
 )
+
+ContactDetail.propTypes = {
+  detail: React.PropTypes.object
+}
 
 export default ContactDetail

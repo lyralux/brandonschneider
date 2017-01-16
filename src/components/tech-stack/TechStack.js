@@ -25,7 +25,7 @@ export const TechStack = (props) => {
 }
 
 TechStack.propTypes = {
-  // stack     : React.PropTypes.object.isRequired,
+  stack     : React.PropTypes.array.isRequired,
   // todo : React.PropTypes.func.isRequired
 }
 

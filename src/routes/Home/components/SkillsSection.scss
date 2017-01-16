@@ -1,0 +1,156 @@
+@import '~styles/base';
+
+.skills-section {
+  .skills-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: $vertical-spacing;
+    padding-bottom: 10px;
+    background-color: $lightGrey;
+  }
+
+  h2 {
+    padding: 0 20px;
+    line-height: 1.2;
+    color: $nonBlack;
+    @media screen and (min-width: $bp-large) {
+      font-size: 60px;
+    }
+  }
+
+  .skills {
+    position: relative;
+    padding: 10px 15px 40px 15px;
+    background-color: $lightGrey;
+  }
+
+  .skills-tabs {
+    display: block;
+    margin: 0 0 30px 0;
+    text-align: center;
+
+    > div {
+      display: inline-block;
+      margin: 0 20px 10px 20px;
+      cursor: pointer;
+      font-family: $Futura;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: $nonBlack;
+      transition: opacity $hover-duration-quick ease-in-out;
+      font-weight: 900;
+
+      &[aria-selected="true"] {
+        border-bottom: 4px solid;
+      }
+
+      &:hover:not([aria-selected="true"]) {
+        opacity: $hover-fade-back;
+      }
+    }
+  }
+
+  .skills-container {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+
+  @media screen and (min-width: $bp-medium) {
+    .skills-title{
+      padding-top: $vertical-spacing-medium;
+      //padding-bottom: 40px;
+    }
+
+    .grid {
+      padding-top: 0;
+    }
+
+    .skills {
+      padding-bottom: 60px;
+    }
+
+    .skills-tabs {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $bp-large) {
+
+    .skills-title {
+      padding-top: $vertical-spacing-large;
+      //padding-bottom: 60px;
+    }
+
+    .skills {
+      padding-bottom: 80px;
+    }
+
+    .skills-tabs {
+      margin: 0 0 45px 0;
+
+      li {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.skills-button {
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+  @media screen and (max-width: $bp-small) {
+    display: block;
+  }
+
+  .button,
+  .button:after {
+    height: $input-height;
+  }
+
+  .button {
+    width: auto;
+    padding: 0 20px;
+    background: $offWhite;
+
+    border: 0;
+    font-size: 18px;
+    border-radius: 0;
+    font-weight: bold;
+
+    .submit-text {
+      display: inline;
+      line-height:$input-height;
+      color: $nonBlack;
+    }
+
+    &:after {
+
+    }
+
+    &:active {
+      /* TODO: Use a 'darken' function here but the sass one doesn't seem to be working. Bad-sass! */
+      background: $lightGrey;
+    }
+
+    &:after {
+      @include arrow-icon($nonBlack);
+      width: 13px;
+      height: 10px;
+      margin-left: 10px;
+      content: "";
+      position: relative;
+      display: inline-block;
+      background-size: 13px 10px;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      //transform: rotate(-90deg) scale(0.8);
+    }
+  }
+}
+
+
+
+

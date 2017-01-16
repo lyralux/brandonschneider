@@ -76,7 +76,7 @@ const setTransition = (() => {
     return value + 'ms'
   }
   return (el, params) => {
-    var transition = {
+    const transition = {
       'property': 'opacity,' + transformProperty(),
       'duration': addUnit(params.duration || defaults.duration),
       'timing-function': params.easing || defaults.easing,
@@ -107,7 +107,7 @@ const setOpacity = (el, params) => {
 // transform =====================================================================================
 
 const transformProperty = (() => {
-  var transform
+  let transform
   return () => {
     if (!transform) {
       transform = 'transform' in document.body.style ? 'transform' : '-webkit-transform'

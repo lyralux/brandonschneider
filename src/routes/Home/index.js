@@ -14,7 +14,7 @@ export default (store) => ({
     require.ensure([], (require) => {
       /*  Webpack - use require callback to define
        dependencies for bundling   */
-      const Home = require('./components/HomeView').default
+      const Home = require('./containers/HomeContainer').default
       const reducer = require('./modules/home').default
 
       /*  Add the reducer to the store on key 'counter'  */

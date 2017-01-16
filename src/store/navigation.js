@@ -1,3 +1,4 @@
+import {isArray} from 'lodash'
 /**
  * Created by lvx on 1/10/17.
  */
@@ -6,6 +7,7 @@
 // ------------------------------------
 export const SHOW_MODAL = 'SHOW_MODAL'
 export const CLOSE_MODAL = 'CLOSE_MODAL'
+export const SCROLL_TO = 'SCROLL_TO'
 
 // ------------------------------------
 // Actions
@@ -23,27 +25,62 @@ export function closeModal () {
   }
 }
 
+export const scrollTo = () => {
+  return (dispatch, getState) => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        dispatch({
+          type    : SCROLL_TO,
+          payload : getState().navigation.scrollPosition
+        })
+        resolve()
+      }, 200)
+    })
+  }
+}
+
+export const actions = {
+  showModal,
+  scrollTo,
+  closeModal
+}
 // ------------------------------------
 // Specialized Action Creator
 // ------------------------------------
-export const updateLocation = ({ dispatch }) => {
-  return (nextLocation) => dispatch(locationChange(nextLocation))
-}
+// export const updateLocation = ({ dispatch }) => {
+//   return (nextLocation) => dispatch(locationChange(nextLocation))
+// }
+
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
   [SHOW_MODAL]    : (state, action) => {
-    return {
-      ...state,
-      modal: action.payload
+    if (isArray(action.payload)) {
+      return {
+        ...state,
+        modal: action.payload[0],
+        scrollPosition: action.payload[1]
+      }
+    } else {
+      return {
+        ...state,
+        modal: action.payload
+      }
     }
   },
   [CLOSE_MODAL] : (state) => {
     return {
       ...state,
-      modal: null
+      modal: null,
+      scrollTo: null
+    }
+  },
+  [SCROLL_TO]: (state, action) => {
+    return {
+      ...state,
+      scrollTo: 0
     }
   }
 }
