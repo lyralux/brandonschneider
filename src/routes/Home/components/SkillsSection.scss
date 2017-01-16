@@ -32,7 +32,7 @@
 
     > div {
       display: inline-block;
-      margin: 0 20px 10px 20px;
+      margin: 0 40px 10px 40px;
       cursor: pointer;
       font-family: $Futura;
       font-size: 24px;
@@ -73,6 +73,9 @@
 
     .skills-tabs {
       display: block;
+      > div {
+        margin: 0 20px 10px
+      }
     }
   }
 

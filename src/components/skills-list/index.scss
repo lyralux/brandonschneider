@@ -125,15 +125,17 @@
       display: none;
     }
 
-    .skills-items {
-      padding: 40px;
-    }
+
 
     .skills-info {
       display: flex;
 
       > div {
         width: 50%;
+      }
+
+      .skills-items {
+        padding: 40px;
       }
 
       .info {
