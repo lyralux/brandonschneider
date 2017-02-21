@@ -1,6 +1,6 @@
 # brandon schneider
 
-My personal website written in ES6/ES7 with React/Redux and node.js
+My personal website written in ES6 with React/Redux and node.js
 
 ## TODO
 * Add Readme
