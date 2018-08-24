@@ -12,7 +12,7 @@ const skillsData = {
   'front-end': {
     title: 'Front-End',
     desc: 'I have extensive experience with HTML/CSS, Responsive design patterns, JavaScript libraries/frameworks (Backbone.JS, React, jQuery, Angular), RESTful APIs and web services, Git and Version Control, Frontend frameworks (Bootstrap, Foundation), Cross-Browser Development, and testing/debugging. My current focus is on React/Redux.',
-    color: '#14C04D',
+    color: 'linear-gradient(30deg, #16D6D9, #14C04D)',
     skills: [
       {
         title: 'HTML5/CSS3',
@@ -38,11 +38,13 @@ const skillsData = {
   },
   'back-end': {
     title: 'Back-End',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id tristique eros, et varius enim. Etiam eget varius diam, vel imperdiet eros. Aliquam turpis diam, ultrices ut ornare eu, iaculis.',
-    color: '#009CF3',
+    desc: 'Experience with: Database creation, integration, and management—e.g., MySQL, SQLite, PostgreSQL, and MongoDB. Cloud computing integration. Web Server technologies (Apache, Nginx, and IIS). Server-side programming languages (Python, PHP, Ruby, Node.js). Operating systems: Linux and Unix, macOS, Windows Server' +
+      ' Content management system (CMS) development, deployment, and maintenance.' +
+      ' API integration.',
+    color: 'linear-gradient(30deg, #16D6D9, #009CF3)',
     skills: [
       {
-        title: 'PHP',
+        title: 'PHP (Symfony2, Laravel)',
         exp: 5,
         val: 85
       },
@@ -57,7 +59,7 @@ const skillsData = {
         val: 80
       },
       {
-        title: 'Data Structures and Algorithms',
+        title: 'API Integration',
         exp: 5,
         val: 85
       }
@@ -65,27 +67,27 @@ const skillsData = {
   },
   'personality': {
     title: 'Personality',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id tristique eros, et varius enim. Etiam eget varius diam, vel imperdiet eros. Aliquam turpis diam, ultrices ut ornare eu, iaculis.',
-    color: '#F9615B',
+    desc: 'Curiosity is my driving force. I\'ve build all of my experience based off doing things that I\'m passionate about, and truly enjoy doing. Equal parts technology and vision, I\'m both creative and tech-savvy. I consider myself an artist and programming as a usable art.',
+    color: 'linear-gradient(30deg, #E60C29, #FFC39B)',
     skills: [
       {
         title: 'Technical capability',
-        exp: 26,
+        exp: 28,
         val: 100
       },
       {
         title: 'Superior attention to detail',
-        exp: 26,
+        exp: 28,
         val: 100
       },
       {
         title: 'Adaptability, quickly learn new technologies',
-        exp: 26,
+        exp: 28,
         val: 100
       },
       {
         title: 'Curiosity',
-        exp: 26,
+        exp: 28,
         val: 100
       }
     ]

@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 /**
  * Created by brand on 1/11/2017.
  */
@@ -86,16 +87,51 @@ const ExperienceItem = React.createClass({
 
     return str
   },
+  renderSub () {
+    const { job } = this.props
+    let sub = get(job, 'sub')
+    let disp;
+    if (sub) {
+      disp = (
+        <i>{sub}</i>
+      )
+    }
+    return disp
+  },
+  renderSubList (highlights, subIndex) {
+    let { main, sub} = highlights
+    let { job } = this.props
+    let jobId = get(job, 'id')
+    console.log(highlights)
+    let out
+    out = (
+      <li key={`${jobId}-${subIndex}`}>{main}
+        <ul>
+          {sub.map((highlight, index) => (
+            <li key={`${jobId}-${subIndex}-${index}`}>{highlight}</li>
+          ))}
+        </ul>
+      </li>
+    )
+    return out
+  },
   renderHighlights () {
     const { job } = this.props
     const hightLights = get(job, 'highlights')
+    const jobId = get(job, 'id')
     let list
     if (hightLights.length) {
       list = (
         <ul className='job-highlights'>
-          {hightLights.map(highlight => (
-            <li>{highlight}</li>
-          ))}
+          {hightLights.map((highlight, index) => {
+            if (typeof highlight === 'object') {
+              return this.renderSubList(highlight, index)
+            } else {
+              return (
+                <li key={`${jobId}-${index}`}>{highlight}</li>
+              )
+            }
+          })}
         </ul>
       )
     }
@@ -103,6 +139,7 @@ const ExperienceItem = React.createClass({
   },
   render () {
     const { job, open, colour } = this.props
+
     const classes = classnames('job-item', {
       open: open,
       loading: open && !this.getLoadedState()
@@ -118,6 +155,8 @@ const ExperienceItem = React.createClass({
         <p className='timeframe-text'>{this.renderTimeFrame()}</p>
         <p className='description-text'>
           {ellipsize(get(job, 'desc'), 400)}
+          <br />
+          {this.renderSub()}
         </p>
         {this.renderHighlights()}
 

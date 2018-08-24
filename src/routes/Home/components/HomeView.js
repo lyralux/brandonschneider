@@ -6,6 +6,8 @@ import SingleColumn from 'components/single-column'
 import ExperienceList from 'components/experience-list'
 import TechStack from 'components/tech-stack'
 import SkillsSection from './SkillsSection'
+import GradientWords from 'components/gradient-words'
+import ContentWrapper from 'components/content-wrapper'
 // import PageLoader from 'components/page-loader'
 
 import techStackData from 'data/techStack'
@@ -17,7 +19,6 @@ class HomeView extends React.Component {
     this.state = {
       loaded: false
     }
-
   }
   componentDidMount () {
     const { fetchExperience } = this.props
@@ -35,21 +36,23 @@ class HomeView extends React.Component {
 
     const ExperienceSection = () => {
       return (
-        <div key='job-section'>
-          <div className='current-openings'>
-            <h2>Experience</h2>
-          </div>
-          <section className='jobs'>
-            <div className='jobs-container'>
-              <ExperienceList
-                key={`jobs-experience`}
-                title='Experience'
-                jobs={experienceData}
-                selected
-              />
+        <ContentWrapper className="content-wrapper-experience no-v-pad">
+          <div key='job-section'>
+            <div className='current-openings'>
+              <h2>Experience</h2>
             </div>
-          </section>
-        </div>
+            <section className='jobs'>
+              <div className='jobs-container'>
+                <ExperienceList
+                  key={`jobs-experience`}
+                  title='Experience'
+                  jobs={experienceData}
+                  selected
+                />
+              </div>
+            </section>
+          </div>
+        </ContentWrapper>
       )
     }
     return (
@@ -71,16 +74,23 @@ class HomeView extends React.Component {
           backgroundColour=''
           isInZebraList={false}
         >
-          <h2 className='title'>About me</h2>
+
+          <h2 className='title'><GradientWords word='About Me' color='los-angeles' /></h2>
           <div className='methumb-holder'>
             <img className='methumb' src='/img/me_thumb_bw.jpg' />
           </div>
           <p className='title is-4 block'>Brandon Schneider</p>
-          <p className='subtitle is-6 has-text-centered'>Full-Stack Developer</p>
+          <p className='subtitle is-6 has-text-centered'>Front-end Developer</p>
           <hr />
-          <p>My curiosity is my driving force.
-            I am entirely self-taught and have built all of my experience based on doing
-            things that I am passionate about, and truly enjoy doing.</p>
+          <p>Creative, tech professional with 4+ years of front-end development
+            experience and extensive project experience from concept to development.
+          </p>
+          <p>
+            Curiosity is my driving force. I've build all of my experience based off
+            doing things that I'm passionate about, and truly enjoy doing.
+            Equal parts technology and vision, I'm both creative and tech-savvy.
+            I consider myself an artist and programming as a usable art.
+          </p>
           <p>
             I currently work as an independent contractor and am also exploring full-time opportunities.
           </p>
@@ -93,10 +103,11 @@ class HomeView extends React.Component {
         </SingleColumn>
         <ExperienceSection />
         <SkillsSection showSkillModal={this.props.showModal} className={'home-skills'} setSelectedSkill={this.props.setSelectedSkill} selectedSkill={this.props.selectedSkill} />
-        <TechStack stack={get(techStackData, 'stack')} />
+        <ContentWrapper className='content-wrapper-stack no-v-pad'><TechStack stack={get(techStackData, 'stack')} /></ContentWrapper>
       </article>
     )
   };
 }
+
 
 export default HomeView

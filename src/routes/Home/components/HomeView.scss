@@ -35,7 +35,7 @@
 .page-join-us {
 
   .hero {
-    background-color: $blu;
+    @include page-background-colour(cold);
 
     .rimage {
       max-width: 800px;
@@ -86,10 +86,10 @@
   .current-openings {
     padding-top: $vertical-spacing;
     padding-bottom: 10px;
-    background-color: $lightGrey;
+    //background-color: $lightGrey;
 
     h2 {
-      color: $nonBlack;
+      color: $offWhite;
 
       @media screen and (min-width: $bp-large) {
         font-size: 60px;
@@ -105,7 +105,7 @@
   .jobs {
     position: relative;
     padding: 10px 15px 40px 15px;
-    background-color: $lightGrey;
+    //background-color: $lightGrey;
   }
 
   .jobs-studio-tabs {

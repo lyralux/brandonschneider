@@ -2,14 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
 import AppContainer from './containers/AppContainer'
+import env from './adaptors/client/env'
+
 
 import 'styles/lib/font.css'
 
+window.env = env
 // ========================================================
 // Store Instantiation
 // ========================================================
 const initialState = window.___INITIAL_STATE__
 const store = createStore(initialState)
+
+console.log(env.Modernizr)
+
 
 // ========================================================
 // Render Setup

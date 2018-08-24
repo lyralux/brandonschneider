@@ -4,9 +4,14 @@
     "title": "Work with me",
     "type": "work",
     "methods": [{
-      "text": "schneider.brandonjames@gmail.com",
+      "text": "brandon@brandonjs.com",
       "type": "email",
-      "uri": "mailto:schneider.brandonjames@gmail.com"
-    }]
+      "uri": "mailto:brandon@brandonjs.com"
+    },
+      {
+        "text": "(206) 619-6640",
+        "type": "phone",
+        "uri": "tel:1+206-619-6640"
+      }]
   }
 ]

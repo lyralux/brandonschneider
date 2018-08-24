@@ -11,8 +11,8 @@ class SkillsList extends React.Component {
   renderSkills () {
     const { skill: { skills }, skillsCategory } = this.props
     // let skills = [1, 2, 3, 4, 5]
-    return skills.map(item => {
-      return <SkillListItem skill={item} className={skillsCategory} />
+    return skills.map((item, index) => {
+      return <SkillListItem skill={item} key={`skill-${index}`}  className={skillsCategory} />
     })
   }
   render () {
@@ -24,8 +24,8 @@ class SkillsList extends React.Component {
       <div className={classes}>
         <h3>{skillsCategory}</h3>
         <div className='tab-content' id={`tab-content-${id}`}>
-          <div className='skills-info'>
-            <div className='info' style={{ backgroundColor: skill.color }}>
+          <div className={`skills-info ${skillsCategory}`}>
+            <div className='info' style={{ backgroundImage: skill.color}}>
               <p className='excerpt'>{get(skill, 'title')}</p>
               <p className='studio-blurb' dangerouslySetInnerHTML={{ __html: skillsDescription }} />
             </div>

@@ -19,16 +19,34 @@
   .skills-info {
     background: #777;
 
+    //&.back-end {
+    //  .info {
+    //    @include page-background-colour(london)
+    //  }
+    //}
+    //
+    //&.front-end {
+    //  .info {
+    //    @include page-background-colour(sydney)
+    //  }
+    //}
+    //&.personality {
+    //  .info {
+    //    @include page-background-colour(losangeles)
+    //  }
+    //}
+
     .info {
-      -webkit-transition: background-color .3s ease-in-out;
-      -moz-transition: background-color .3s ease-in-out;
-      -ms-transition: background-color .3s ease-in-out;
-      -o-transition: background-color .3s ease-in-out;
-      transition: background-color .3s ease-in-out;
+      -webkit-transition: background-image .3s ease-in-out;
+      -moz-transition: background-image .3s ease-in-out;
+      -ms-transition: background-image .3s ease-in-out;
+      -o-transition: background-image .3s ease-in-out;
+      transition: background-image .3s ease-in-out;
     }
 
     > div {
-      background-color: #fff;
+      background-color: transparent;
+      background-image: linear-gradient(30deg, #fff, #fff);
     }
     .skills-items {
       padding: 20px;
