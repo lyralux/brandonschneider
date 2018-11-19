@@ -8,3 +8,11 @@
   z-index: 10;
   width: 100%;
 }
+
+
+.nav-item.nav-logo {
+  padding-left: 2rem;
+  img {
+    max-height: 48px;
+  }
+}

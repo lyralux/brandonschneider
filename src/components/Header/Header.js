@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { IndexLink, Link } from 'react-router'
 import { showModal } from 'store/navigation'
 import './Header.scss'
-import logo from './brandonjs.png'
+import logo from './brandonjs_v2.png'
 
 class Header extends Component {
   constructor (props) {
@@ -24,7 +24,7 @@ class Header extends Component {
       <header className='app-header'>
         <nav className='nav'>
           <div className='nav-left'>
-            <a className='nav-item'>
+            <a className='nav-item nav-logo'>
               <img src={logo} alt='brandon.js' />
             </a>
           </div>

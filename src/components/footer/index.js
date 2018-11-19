@@ -9,12 +9,11 @@ class Footer extends Component {
     // routes : PropTypes.object.isRequired,
     // store  : PropTypes.object.isRequired
   }
-
   render () {
     return (
       <footer className='app-footer'>
         <div className='footer__logo'>
-          <img src='/logo_white.png' />
+          <img src='/brandonjs_v2_white.png' />
         </div>
         <div className='content'>
           <div className='copyright'>
